@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Animation Transition</title>
+  <link rel="stylesheet" href="css/intro.css">
+</head>
+<body>
+
+  <!-- Introduction Wrapper -->
+  <div id="intro-wrapper">
+    <div class="introduction">
+      <span id="type-text">...</span>
+      <span class="blinking-cursor">_</span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+ 
+
+  <script>
+    const sleep = time => new Promise(resolve => setTimeout(resolve, time));
+
+    const typeAsync = {
+      node: null,
+
+      get typeInterval() {
+        const randomMs = 100 * Math.random();
+        return randomMs < 50 ? 10 : randomMs;
+      },
+
+      async type(text) {
+        for (let character of text) {
+          this.node.innerText += character;
+          await sleep(this.typeInterval);
+        }
+      },
+
+      async delete(text) {
+        for (let i = 0; i < text.length; i++) {
+          this.node.innerText = this.node.innerText.slice(0, -1);
+          await sleep(this.typeInterval);
+        }
+      }
+    };
+
+    async function init() {
+      const introWrapper = document.getElementById("intro-wrapper");
+      const main = document.getElementById("main-content");
+      typeAsync.node = document.getElementById("type-text");
+
+      await sleep(1000);
+      typeAsync.node.innerText = "";
+
+      await typeAsync.type('Brief, ');
+      await typeAsync.type('Hello!');
+      await sleep(500);
+      await typeAsync.delete('Hello!');
+
+      await typeAsync.type('Hola!');
+      await sleep(500);
+      await typeAsync.delete('Hola!');
+
+      await typeAsync.type('Namaste!');
+      await sleep(500);
+      await typeAsync.delete('Namaste!');
+
+      await typeAsync.type('こんにちは!');
+      await sleep(1000);
+
+      // Fade out intro and fade in main content
+      introWrapper.style.opacity = "0";
+      introWrapper.style.visibility = "hidden";
+      main.classList.add("show");
+    }
+
+    init();
+  </script>
+
+</body>
+</html>

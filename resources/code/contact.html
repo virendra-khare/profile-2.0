@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+      /* From Uiverse.io by Yaya12085 */ 
+    body{
+      padding: 0px;
+      margin: 0px;
+      font-size: 18px;
+      background: #e2e8ec;
+      color: gray;
+    }
+.contact-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+.form {
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #e2e8ec;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 30px 30px -30px rgba(27, 26, 26, 0.315);
+  overflow: hidden;
+}
+
+.form .title {
+  color: #111;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input {
+  outline: 0;
+  border: 1px solid rgb(219, 213, 213);
+  background-color: transparent;
+  padding: 8px 14px;
+  border-radius: 8px;
+  width: 90%;
+  height: 50px;
+}
+
+.form textarea {
+  border-radius: 8px;
+  height: 100px;
+  width: 90%;
+  background-color: transparent;
+  resize: none;
+  outline: 0;
+  padding: 8px 14px;
+  border: 1px solid rgb(219, 213, 213);
+}
+
+.form button {
+  align-self: flex-end;
+  padding: 8px;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #111;
+  color: #fff;
+  cursor: pointer;
+}
+@media only screen and (max-width: 730px) {
+           .heading1{
+            font-size: 38px;
+           }
+
+           .heading2{
+            font-size: 22px;
+           }
+        }
+    
+    </style>
+</head>
+<body>
+     <!--Navbar Section Start-->
+    <header>
+        <div class="logo">
+            <a href="index.html">Brief</a>
+        </div>
+        
+<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Project's</a>
+            <a href="service.html">Service's</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+    </header>
+
+    <div id="side-nav">
+        <a href="index.html">Home</a>
+        <a href="#">Project's</a>
+        <a href="service.html">Service's</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+<!--
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+-->
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+
+  const sideNav = document.getElementById("side-nav");
+  sideNav.style.display = (sideNav.style.display === "flex") ? "none" : "flex";
+}
+</script>
+<!--Navbar Section End-->
+    <!-- From Uiverse.io by Yaya12085 -->
+<div class="contact-form"> 
+<form class="form" method="post" action="message.php">
+  <div class="title"><h1 class="heading1">Want to work with us?</h1> <br></div>
+  <span style="width: 100%;">
+    <h1 class="heading2">
+      Let's create something unforgettable
+    </h1>
+  </span>
+  <p>Just tell us about your project, what are your goals, and let's start.</p>
+  
+  <!-- Add name attributes -->
+  <input type="text" name="name" placeholder="Your Name" class="input" required>
+  <input type="email" name="email" placeholder="Your E-mail" class="input" required>
+  <textarea name="message" placeholder="Your message" required></textarea>
+  
+  <button type="submit">Submit</button>
+</form>
+</div>
+<div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf8onnjbxImrq0DDwR8B7HrdRn-IGq3ANQLDFulu7zJGvS7fA/viewform?embedded=true" width="840" height="742" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
+  <footer>
+    <div class="fcontainer-1">
+        <span><h1 style="padding: 0px 15px;">I'd love to work together.</h1></span>
+        <span><b style="padding: 0px 15px;">Let's Connect</b></span>
+        <span style="padding: 0px 15px;">Dev.virendrakhare@gmail.com</span>
+       <!-- <span style="padding: 0px 15px;"><img src="src/img/icons8-linkedin.svg" alt=""></span>-->
+    </div>
+    <div class="fcontainer-2">
+         
+            <div class="fcon-link">
+                <span>
+                    <a href="service.html">Web Development</a>
+                </span>
+                 <span>
+                    <a href="about.html">About</a>
+                </span>
+                 <span>
+                    <a href="contact.html">Contact Me</a>
+                </span>
+            </div>
+        </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">Brief</a>
+        </div>
+        
+<div class="container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="#">Project's</a>
+            <a href="service.php">Service's</a>
+            <a href="about.php">About</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8onnjbxImrq0DDwR8B7HrdRn-IGq3ANQLDFulu7zJGvS7fA/viewform?usp=header">Contact</a>
+        </nav>
+        
+    </header>
+
+    <div id="side-nav">
+        <a href="index.php">Home</a>
+        <a href="#">Project's</a>
+        <a href="service.php">Service's</a>
+        <a href="about.php">About</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8onnjbxImrq0DDwR8B7HrdRn-IGq3ANQLDFulu7zJGvS7fA/viewform?usp=header">Contact</a>
+    </div>
+
+<!--
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
+-->
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+
+  const sideNav = document.getElementById("side-nav");
+  sideNav.style.display = (sideNav.style.display === "flex") ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>

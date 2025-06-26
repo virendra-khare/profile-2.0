@@ -1,0 +1,61 @@
+
+        footer{
+        width: 90%;
+        padding: 50px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .fcontainer-1{
+        width: auto; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fcontainer-1 span{
+        padding: 20px 0px;
+    }
+
+      .fcontainer-2{
+        width: auto; 
+        display: flex;
+        flex-direction: row;
+    }
+
+    .fcon-link{
+        width: auto;
+        display: inline-flex;
+        flex-direction: row;
+    }
+
+    .fcon-link span {
+        padding: 0px 20px;
+    }
+
+    .fcon-link span a{
+        text-decoration: none;
+        color: gray;
+        border-bottom: 1px solid gray; padding-bottom: 4px;
+    }
+
+      @media screen and (max-width: 1250px) {
+       .fcontainer-2{
+        flex-direction: column;
+       }
+       
+        .fcon-link{
+            flex-direction: column;
+        }
+
+        .fcon-link span{
+            padding: 20px 0px;
+        }
+    }
+ 
+    .fcon-link span a:hover{
+        color: #111;
+        border-bottom: 1px solid #111;
+    }
+    
